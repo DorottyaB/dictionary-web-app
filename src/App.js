@@ -1,24 +1,24 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
+import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
+import { Header } from './components/header/Header';
+import { ThemeContext } from './contexts/ThemeContext';
+
+const queryClient = new QueryClient();
 
 function App() {
+  const { font, theme } = useContext(ThemeContext);
+  const getTheme = theme.isLightTheme ? theme.light : theme.dark;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div
+        className='App'
+        style={{ fontFamily: font.name, backgroundColor: getTheme.bg, color: getTheme.text }}
+      >
+        <Header />
+      </div>
+    </QueryClientProvider>
   );
 }
 
