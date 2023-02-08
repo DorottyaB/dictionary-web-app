@@ -58,7 +58,7 @@ export const Header = () => {
           </div>
           <div className='theme-btn-container'>
             <label className='switch'>
-              <input type='checkbox' onClick={toggleTheme} />
+              <input type='checkbox' onChange={toggleTheme} checked={!theme.isLightTheme} />
               <span className='slider round'></span>
             </label>
             <svg
