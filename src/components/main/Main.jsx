@@ -5,7 +5,7 @@ import { Result } from '../result/Result';
 import './main.css';
 
 export const Main = () => {
-  const { theme } = useContext(ThemeContext);
+  const { theme, font } = useContext(ThemeContext);
   const getTheme = theme.isLightTheme ? theme.light : theme.dark;
 
   const [query, setQuery] = useState('');
@@ -31,7 +31,11 @@ export const Main = () => {
         <div className='search-bar'>
           <input
             className={theme.isLightTheme ? 'light' : 'dark'}
-            style={{ backgroundColor: getTheme.inputBg, color: getTheme.text }}
+            style={{
+              backgroundColor: getTheme.inputBg,
+              color: getTheme.text,
+              fontFamily: font.name,
+            }}
             type='search'
             name='q'
             id='word-search'

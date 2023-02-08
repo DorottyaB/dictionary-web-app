@@ -50,14 +50,6 @@
   word-break: break-all;
 }
 
-.source-container a:hover {
-  color: #a44ce6 !important;
-}
-
-.source-container a:hover svg {
-  filter: invert(37%) sepia(51%) saturate(1863%) hue-rotate(248deg) brightness(91%) contrast(98%);
-}
-
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 44px;
@@ -68,5 +60,13 @@
   .play-stop-btn:not(:disabled):hover {
     cursor: pointer;
     filter: brightness(120%);
+  }
+
+  .source-container a:hover {
+    color: #a44ce6 !important;
+  }
+
+  .source-container a:hover svg {
+    filter: invert(38%) sepia(52%) saturate(1677%) hue-rotate(246deg) brightness(90%) contrast(100%);
   }
 }
