@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { useDictionaryData } from '../../custom-hooks/useDictionaryData';
 import { Result } from '../result/Result';
@@ -16,6 +16,8 @@ export const Main = () => {
   const index = lengths?.indexOf(Math.max(...lengths));
   const result = data?.data[index];
 
+  const searchInput = useRef(null);
+
   function updateQuery(e) {
     const { value } = e.target;
     setIsInvalid(false);
@@ -26,6 +28,7 @@ export const Main = () => {
     e.preventDefault();
     if (query.length < 1) {
       setIsInvalid(true);
+      searchInput.current.focus();
       return;
     }
     setIsInvalid(false);
@@ -43,6 +46,7 @@ export const Main = () => {
               color: getTheme.text,
               fontFamily: font.name,
             }}
+            ref={searchInput}
             type='search'
             name='q'
             id='word-search'
@@ -51,6 +55,7 @@ export const Main = () => {
             onChange={updateQuery}
             spellCheck={true}
             aria-label='Search for any word'
+            autoFocus={true}
           />
           <button onClick={handleSubmit} className='search-btn' title='Search' type='submit'>
             <svg

@@ -32,7 +32,7 @@ export const Result = ({ word, phonetics, meanings, source }) => {
             src={isPlaying ? pauseIcon : playIcon}
             width='20px'
             height='20px'
-            alt='Play/stop icon'
+            alt='Play/pause icon'
           />
         </button>
       </div>
