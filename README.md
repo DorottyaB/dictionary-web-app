@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![]()
+![](./desktop-preview.png)
 
 ### Links
 
 - Solution URL: [GitHub](https://github.com/DorottyaB/dictionary-web-app)
-- Live Site URL: []()
+- Live Site URL: [on Netlify](https://main--precious-llama-8e6baa.netlify.app/)
 
 ## Author
 
