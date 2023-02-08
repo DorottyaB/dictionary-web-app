@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import './App.css';
 import { Header } from './components/header/Header';
+import { Main } from './components/main/Main';
 import { ThemeContext } from './contexts/ThemeContext';
 
 const queryClient = new QueryClient();
@@ -17,6 +18,7 @@ function App() {
         style={{ fontFamily: font.name, backgroundColor: getTheme.bg, color: getTheme.text }}
       >
         <Header />
+        <Main />
       </div>
     </QueryClientProvider>
   );

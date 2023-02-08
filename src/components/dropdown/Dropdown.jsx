@@ -26,7 +26,11 @@ export const Dropdown = () => {
         name='font'
         onChange={handleChange}
       />
-      <label className='dropdown-label' htmlFor='serif'>
+      <label
+        className='dropdown-label'
+        htmlFor='serif'
+        style={{ fontFamily: 'Roboto Serif, serif' }}
+      >
         Serif
       </label>
       <input
@@ -36,7 +40,11 @@ export const Dropdown = () => {
         name='font'
         onChange={handleChange}
       />
-      <label className='dropdown-label' htmlFor='sans-serif'>
+      <label
+        className='dropdown-label'
+        htmlFor='sans-serif'
+        style={{ fontFamily: 'Roboto Flex, sans-serif' }}
+      >
         Sans
       </label>
       <input
@@ -46,7 +54,11 @@ export const Dropdown = () => {
         name='font'
         onChange={handleChange}
       />
-      <label className='dropdown-label' htmlFor='monospace'>
+      <label
+        className='dropdown-label'
+        htmlFor='monospace'
+        style={{ fontFamily: 'Roboto Mono, monospace' }}
+      >
         Mono
       </label>
     </div>

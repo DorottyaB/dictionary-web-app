@@ -8,7 +8,7 @@ const ThemeContextProvider = ({ children }) => {
     light: {
       bg: '#FFFFFF',
       text: '#050505',
-      inputBg: '#757575',
+      inputBg: '#f4f4f4',
       iconColor: '#757575',
     },
     dark: {

@@ -1,0 +1,62 @@
+section {
+  margin-top: 45px;
+}
+
+section div {
+  padding-top: 15px;
+}
+
+h2.title {
+  width: 100%;
+  border-bottom: 1px solid #75757558;
+  line-height: 0.1em;
+  margin: 10px 0 30px;
+  font-style: italic;
+  font-size: 16px;
+}
+
+h2.title span {
+  padding-right: 20px;
+}
+
+.sub-title {
+  color: #757575;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+ul {
+  padding: 20px 20px 0;
+  list-style-position: outside;
+}
+
+li {
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+
+li:last-of-type {
+  margin-bottom: 10px;
+}
+
+li::marker {
+  color: #a44ce6;
+}
+
+q {
+  display: block;
+  color: #757575;
+  margin-top: 15px;
+}
+
+.synonyms-container {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: 30px;
+  row-gap: 10px;
+}
+
+.synonyms-container span {
+  font-weight: 600;
+  color: #a44ce6;
+}

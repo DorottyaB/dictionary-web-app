@@ -1,0 +1,102 @@
+.main-container {
+  margin-top: 6%;
+}
+
+.search-bar {
+  width: 100%;
+  position: relative;
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
+
+input[type='search'] {
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+input[type='search']:focus-visible {
+  outline: 2px solid #a44ce6;
+}
+
+input[type='search']::placeholder {
+  font-weight: 400;
+}
+
+input[type='search'].light:-webkit-autofill,
+input[type='search'].light:-webkit-autofill:hover,
+input[type='search'].light:-webkit-autofill:focus,
+input[type='search'].light:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f4f4f4 inset !important;
+}
+input[type='search'].dark:-webkit-autofill,
+input[type='search'].dark:-webkit-autofill:hover,
+input[type='search'].dark:-webkit-autofill:focus,
+input[type='search'].dark:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #1f1f1f inset !important;
+  -webkit-text-fill-color: #f4f4f4 !important;
+}
+
+.search-btn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.result-container {
+  margin-top: 30px;
+}
+
+/* Loading spinner */
+.lds-ring {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  border: 4px solid #757575;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #757575 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .search-btn:hover {
+    filter: brightness(120%);
+  }
+}

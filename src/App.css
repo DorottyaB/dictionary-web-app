@@ -9,12 +9,12 @@
 }
 
 .App {
-  padding: 20px 15px;
+  padding: 20px 7% 80px;
   min-height: 100vh;
 }
 
 @media screen and (min-width: 800px) {
   .App {
-    padding: 35px 20%;
+    padding: 35px 20% 80px;
   }
 }
