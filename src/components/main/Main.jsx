@@ -10,6 +10,7 @@ export const Main = () => {
 
   const [query, setQuery] = useState('');
   const { data, refetch, isLoading, isError } = useDictionaryData(query);
+  const [isInvalid, setIsInvalid] = useState(false);
 
   const lengths = data?.data.map(a => a.meanings.length);
   const index = lengths?.indexOf(Math.max(...lengths));
@@ -17,11 +18,17 @@ export const Main = () => {
 
   function updateQuery(e) {
     const { value } = e.target;
+    setIsInvalid(false);
     setQuery(value);
   }
 
   function handleSubmit(e) {
     e.preventDefault();
+    if (query.length < 1) {
+      setIsInvalid(true);
+      return;
+    }
+    setIsInvalid(false);
     refetch();
   }
 
@@ -78,6 +85,11 @@ export const Main = () => {
             </svg>
           </button>
         </div>
+        {isInvalid && (
+          <div className='tooltip'>
+            <span>Please fill out this field.</span>
+          </div>
+        )}
       </form>
       <div className='result-container'>
         {isLoading && (

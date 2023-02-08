@@ -2,6 +2,49 @@
   margin-top: 6%;
 }
 
+form {
+  position: relative;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0.65;
+    top: 105%;
+  }
+  100% {
+    opacity: 1;
+    top: 100%;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  top: 70%;
+  right: 0;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background-color: #e7c7ff;
+  color: #1f1f1f;
+  font-size: 13px;
+  margin-top: 10px;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+.tooltip span::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  background-color: #e7c7ff;
+  transform: rotate(45deg) translateX(-50%);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 1px;
+}
+
 .search-bar {
   width: 100%;
   position: relative;
