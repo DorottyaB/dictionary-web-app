@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/DorottyaB/dictionary-web-app)
-- Live Site URL: [on Netlify](https://main--precious-llama-8e6baa.netlify.app/)
+- Live Site URL: [on Netlify](https://dictionary-dorottyab.netlify.app/)
 
 ## Author
 
